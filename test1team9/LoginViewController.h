@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
+@property (strong,nonatomic) IBOutlet UITextField *emailID;
+@property (strong,nonatomic) IBOutlet UITextField *password;
+
+-(IBAction)login:(id)sender;
+-(IBAction)signup:(id)sender;
+-(void)printMessage:(NSString *) name;
 
 @end

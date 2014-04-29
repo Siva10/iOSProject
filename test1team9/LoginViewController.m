@@ -10,9 +10,35 @@
 
 @interface LoginViewController ()
 
+
+
 @end
 
 @implementation LoginViewController
+@synthesize emailID,password;
+
+-(IBAction)login:(id)sender{
+    NSString *email=emailID.text;
+    NSString *pwd=password.text;
+    BOOL result=TRUE;
+    if (!result) {
+        [self printMessage:@"Invalid emailID or password"];
+    }
+        else{
+            [self printMessage:@"Logged in successfully!"];
+  
+        }
+    }
+
+-(void) printMessage:(NSString *)email{
+    UIAlertView *alertPopUp=[[UIAlertView alloc] initWithTitle:@"Alert" message:email delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertPopUp show];
+    NSLog(@"The message is %@",email);
+
+
+}
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
