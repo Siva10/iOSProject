@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2EB35B190FC07D00FC5455 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EB35A190FC07D00FC5455 /* SignupViewController.m */; };
 		3FCAAF86190E6AFF001F63EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCAAF85190E6AFF001F63EB /* Foundation.framework */; };
 		3FCAAF88190E6AFF001F63EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCAAF87190E6AFF001F63EB /* CoreGraphics.framework */; };
 		3FCAAF8A190E6AFF001F63EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCAAF89190E6AFF001F63EB /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2EB359190FC07D00FC5455 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		3F2EB35A190FC07D00FC5455 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		3FCAAF82190E6AFF001F63EB /* test1team9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1team9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCAAF85190E6AFF001F63EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FCAAF87190E6AFF001F63EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +131,8 @@
 				3FCAAFBD190E6B0D001F63EB /* EventModule.h */,
 				3FCAAFBE190E6B0D001F63EB /* EventModule.m */,
 				3FCAAF97190E6AFF001F63EB /* Main.storyboard */,
+				3F2EB359190FC07D00FC5455 /* SignupViewController.h */,
+				3F2EB35A190FC07D00FC5455 /* SignupViewController.m */,
 				3FCAAF9A190E6AFF001F63EB /* MasterViewController.h */,
 				3FCAAF9B190E6AFF001F63EB /* MasterViewController.m */,
 				3FCAAF9D190E6AFF001F63EB /* DetailViewController.h */,
@@ -269,6 +274,7 @@
 				3FF6BB09190F523900A7BDD4 /* LoginViewController.m in Sources */,
 				3FCAAF92190E6AFF001F63EB /* main.m in Sources */,
 				3FCAAF9F190E6AFF001F63EB /* DetailViewController.m in Sources */,
+				3F2EB35B190FC07D00FC5455 /* SignupViewController.m in Sources */,
 				3FCAAFBF190E6B0D001F63EB /* EventModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

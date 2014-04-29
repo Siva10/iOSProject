@@ -18,6 +18,8 @@
 @synthesize emailID,password;
 
 -(IBAction)login:(id)sender{
+    [emailID resignFirstResponder];
+    [password resignFirstResponder];
     NSString *email=emailID.text;
     NSString *pwd=password.text;
     BOOL result=TRUE;
@@ -25,12 +27,18 @@
         [self printMessage:@"Invalid emailID or password"];
     }
         else{
-            [self printMessage:@"Logged in successfully!"];
-  
+[self performSegueWithIdentifier:@"LoginSuccessSegue" sender:self];  
         }
     }
 
--(void) printMessage:(NSString *)email{
+
+
+-(IBAction)signup:(id)sender{
+    
+    [self performSegueWithIdentifier:@"SignupSegue" sender:self];
+    
+    }
+-(void) printMessage:(NSString *) email{
     UIAlertView *alertPopUp=[[UIAlertView alloc] initWithTitle:@"Alert" message:email delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertPopUp show];
     NSLog(@"The message is %@",email);
@@ -53,12 +61,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    emailID.delegate=self;
+    password.delegate=self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [emailID resignFirstResponder];
+    [password resignFirstResponder];
+    return YES;
 }
 
 /*
