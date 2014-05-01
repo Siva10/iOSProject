@@ -7,16 +7,32 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoginViewController : UIViewController<UITextFieldDelegate>{
+#import "sqlite3.h"
+@interface LoginViewController : UIViewController<UITextFieldDelegate,NSURLSessionDataDelegate>{
     UITextField *emailID;
     UITextField *password;
+    NSString *memberID;
+    NSString *lastName;
+    NSString *firstName;
+    NSString *phone;
+    NSString *email;
+    NSString *pwd;
+
+    NSString *databasePath;
+    sqlite3 *memberDB;
+    sqlite3_stmt *insertStatement;
+    sqlite3_stmt *selectStatement;
+
 }
+- (IBAction)loginAction:(id)sender;
 @property (strong,nonatomic) IBOutlet UITextField *emailID;
 @property (strong,nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic) NSMutableData *buffer;
 
--(IBAction)login:(id)sender;
--(IBAction)signup:(id)sender;
--(void)printMessage:(NSString *) email;
+-(IBAction)gotoSignup:(id)sender;
+
+//-(void)printMessage:(NSString *) email;
+//-(IBAction)createMember;
+//-(IBAction)findMember;
 
 @end
